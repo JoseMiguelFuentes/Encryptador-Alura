@@ -1,0 +1,478 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@400;600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+
+*{
+margin: 0;
+padding: 0;
+list-style: none;
+box-sizing: border-box;
+font-size: 16px;
+}
+
+body{
+  background-color: #F3F5FC;
+  font-family: 'Inter', sans-serif;
+}
+
+.allOk, .show, .alerta{
+  font-family: 'Orbitron', sans-serif;
+  /* font-family: 'Cormorant SC', serif; */
+}
+
+/* Especifidad
+  
+  1. etiquetas
+  2. clases
+  3. id's
+  4. estilos en linea
+  5. !important
+  */
+.allOk{
+  visibility: hidden;
+  position: absolute;
+  top: 10px;
+  color: #ffffff;
+  text-shadow: 1px 2px 2px rgb(0, 0, 0);
+  padding: 8px;
+  background-color: rgba(29, 138, 36, 0.8);
+  border-radius: 15px 0 15px 0;
+  z-index: 9;
+  animation: myblur 1.5s ease-in alternate infinite;
+  border: rgb(61, 24, 155) solid 2px;
+}
+.shown{
+  visibility: hidden;
+  position: absolute;
+  top: 10%;
+  color: #ffffff;
+  text-shadow: 1px 2px 2px rgb(0, 0, 0);
+  padding: 8px;
+  background-color: rgba(29, 138, 36, 0.8);
+  border-radius: 15px 0 15px 0;
+  z-index: 9;
+  animation: myblur 1.5s ease-in alternate infinite;
+  border: rgb(28, 155, 24) solid 2px;
+}
+
+@keyframes myblur {
+  form{ opacity: 1;}
+  to{opacity: 0;}
+}
+
+
+.logo_Alura{
+  position: absolute;
+  top: 24px;
+  left: 16px;
+}
+.section-one{
+  border: none;
+  margin-top: 100px;
+  /* padding: 20px; */
+  text-align: center;
+}
+
+
+
+#input-text{
+  width: 80%;
+  min-height: 300px;
+  color: hsla(213, 84%, 24%, 1);
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 150%;
+  resize: none;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  text-transform: lowercase;
+  font-family: 'Cormorant SC', serif;
+
+}
+
+#input-text::placeholder{
+  color: hsla(213, 84%, 24%, 1);
+}
+#input-text::selection{
+  background: #000;
+  color: rgb(255, 255, 255);
+}
+
+.advertisement{
+  display: flex;
+  color: hsla(210, 9%, 31%, 1)  ;
+  /* #67808E  hsla(201, 16%, 48%, 1) #67808E*/
+  width: 343px;
+  
+}
+.advertisement p{
+  line-height: 15px;
+  font-size: .75rem;
+  font-weight: 400;
+}
+
+.signo-exclamacion{
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+}
+
+
+/*  Botones  */
+
+.buttons{
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+button{
+  cursor: pointer;
+  width: 100%;
+  font-size: 1rem;
+  padding: 24px;
+  border-radius: 24px;
+  border: none;
+}
+
+.actions{
+  padding: 10px;
+}
+
+.encrypt{
+  background-color: hsla(213, 84%, 24%, 1);
+  color: rgb(255, 255, 255);
+  border: 1px solid hsla(213, 84%, 24%, 1);
+}
+.encrypt:hover{
+  background-color: rgb(45, 111, 193);
+}
+
+.decrypt:hover{
+  background-color: rgb(92, 143, 21);
+  color: #FFFFFF;
+}
+
+.copy:hover{
+  background: radial-gradient(closest-side, #000000 25%, #341ede, #21201e);
+  box-shadow: 0px 0px 6px 1px rgba(28, 227, 28, 0.658);
+  color: #ffffff;
+}
+
+.decrypt, .copy{
+  background-color: e5e5e5;
+  color: hsla(213, 84%, 24%, 1);
+  border: 1px solid hsla(213, 84%, 24%, 1);
+}
+
+/*  Botones  ends  */
+
+/*  Resultado  */
+
+.section-two{
+  width: 100%;
+  color: hsl(0,0,100%,1);
+  padding: 40px 5%;
+  position: relative;
+}
+.console{
+  display: none;
+  text-align: center;
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+}
+#output-text{
+  width: 100%;
+  min-height: 150px;
+  color: hsla(213, 84%, 24%, 1);
+  font-weight: 500;
+  font-size: 2rem;
+  color: hsla(213, 84%, 24%, 1);
+  line-height: 150%;
+  resize: none;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-family: 'Cormorant SC', serif;
+}
+
+#output-text::selection{
+  background: #000;
+  color: yellow;
+}
+
+
+.not-found{
+  height: auto;
+  /* 186px */
+  text-align: center;
+  padding: 32px;
+  border: solid 1px transparent;
+  border-radius: 32px;
+  background: #FFFFFF;
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+}
+
+.not-found h3{
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: hsla(210, 10%, 23%, 1);
+}
+.not-found p{
+  font-size: 1rem;
+  font-weight: 400;
+  color: #495057
+}
+
+.perito{
+  display: none;
+}
+.alerta{
+  visibility: hidden;
+  display: inline-block;
+  position: absolute;
+  top: 10%;
+  color: #F3F5FC;
+  text-shadow: 5px 5px 3px #000;
+  padding: 8px;
+  background-color: rgba(97, 105, 195, 0.8);
+  border-radius: 15px 0 15px 0;
+  z-index: 10;
+}
+/* .input-text:active .alerta{
+  visibility: hidden;
+} */
+
+@keyframes move-x {
+  0%{
+    right: 85vw;
+    opacity: 0;
+  }
+  100%{
+    right:5vw;
+    opacity: 1;
+  }
+}
+
+/*  Footer  */
+
+footer{
+  /* position: absolute; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  /* bottom: 0; */
+  height: 100px;
+  width: 100%;
+  background-color: hsla(213, 84%, 24%, 1);
+}
+
+.title{
+  font-size: 17px;
+  width: 100%;
+  color: #FFFFFF;
+  font-family: 'Cormorant SC', serif;
+}
+
+.autor{
+  font-family: 'Explora', cursive;
+  color: #FFFFFF;
+  font-size: 8;
+  bottom: 5px;
+}
+.autor::first-letter{
+  color: rgb(175, 213, 20);
+}
+.date{
+  font-family: 'Explora', cursive;
+  color: #FFFFFF;
+}
+
+/*  Footer ends */
+
+
+/*  Media Queries  */
+
+@media screen and (min-width: 768px){
+  .logo_Alura{
+    top: 73px;
+    left: 40px;
+  }
+  form {
+    padding: 0 40px;
+  }
+  .advertisement{
+    font-size: 1rem;
+  }
+  .buttons{
+    margin-top: 14px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  button {
+    width: 332px;
+  }
+
+  .section-two{
+    padding: 10px 7px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .copy{
+    margin-top: 20px;
+    margin-bottom: 0;
+    width: 100%;
+    font-size: 1rem;
+    padding: 24px;
+    border-radius: 24px;
+  }
+}
+
+
+
+
+
+@media screen and (min-width: 1280px){
+  .logo_Alura{
+    top: 4%;
+    left: 7%;
+  }
+  
+  button {
+    width: 300px;
+  }
+  .allOk{
+    visibility: hidden;
+    position: absolute;
+    top: 10%;
+    padding: 8px;
+  }
+  
+  .advertisement{
+    font-size: 1.2rem;
+  }
+  main{
+    height: 90vh;
+    display: flex;
+    position: relative;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    padding-right: 2.7%;
+    padding-left: 16.6%;
+    background-color: transparent;
+     /* rgba(255, 255, 255, 0.504); */
+  }
+  .section-one #input-text{
+    margin: 0;
+    width: 100%;
+    /* border: 1px blue solid; */
+    box-sizing: content-box;
+  }
+  .section-one{
+    width: 56.6%;
+    position: relative;
+    margin: 0;
+    padding-top: 9%;
+    min-height: 100%;
+    /* border: 1px solid rgb(42, 208, 16); */
+  }
+
+  .actions{
+    position: absolute;
+    bottom: 0;
+    padding: 0;
+  }
+  
+  .section-two{
+    display: block;
+    min-height: 83vh;
+    background: #FFFFFF;
+    width: 28%;
+    height: 100%;
+    box-shadow: 0px 24px 32px 8px rgba(0, 0, 0, 0.08);
+    margin-left: 15.4%;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+    border-radius: 5%;
+    position: relative;
+    padding: 8px;
+  }
+
+  .console{
+    position: absolute;
+    top: auto;
+    bottom: auto;
+    /* background-color: rgb(237, 24, 24); */
+    height: calc(100% - 20px);
+    width: calc(100% - 18px);
+    display: none;
+  }
+
+  
+
+  #output-text{
+    width: 100%;
+    min-height: 80%;
+  }
+  .perito{
+    width: 80%;
+    margin-top: 25.7%;
+    height: 32.2%;
+    display: inline;
+  }
+  
+  .not-found{
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    /* border: 1px solid red; */
+    padding: 0;
+    height: 92%;
+    display: block;
+    min-height: 186px;
+  }
+  footer{
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    height: 5%;
+  }
+  
+  .title{
+    font-size: 17px;
+  }
+  
+  .autor{
+    font-size: 8;
+    position: absolute;
+    left: 10%;
+    bottom: 5px;
+  }
+  .date{
+    font-size: 8;
+    position: absolute;
+    right: 10%;
+    bottom: 5px;
+  
+  }
+}
+
+
