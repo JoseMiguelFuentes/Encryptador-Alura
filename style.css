@@ -176,7 +176,7 @@ body{
 .globe{
   visibility: hidden;
   position: relative;
-  font-size: .5rem;
+  font-size: .8rem;
   border-radius: var(--borde);
   padding: var(--borde);
   --borde: .3rem;
@@ -651,15 +651,9 @@ footer{
     padding: 8px;
   }
 
-  .console{
-    /* position: absolute;
-    top: auto;
-    bottom: auto; */
-    /* height: calc(100% - 20px);
-    width: calc(100% - 18px); */
-  }
+  
   .globe{
-    font-size: .8rem;
+    font-size: 1rem;
   }
 
   .copy{
