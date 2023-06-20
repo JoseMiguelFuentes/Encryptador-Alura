@@ -665,7 +665,8 @@ footer{
 
   #output-text{
     width: 100%;
-    min-height: 80%;
+    min-height: 350px;
+    /* height: 80%; */
   }
   .perito{
     width: 80%;
